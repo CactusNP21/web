@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="description" content="Description">
+    <meta name="keywords" content="Keywords">
+</head>
+<body bgcolor="#deb887">
+<img src="img.jpg" alt="">
+<h1>Про себе</h1>
+<p align="center">Я працюю в Дія Бізнес Полтава. Люблю комп'ютери та техніку. Займаюся діджиталізацією нашого офісу, наприклад
+    корпоративні пошти, чат-боти та інше. Мені 19 років, жив у Полтаві весь цей час</p>
+<h1>Моє хобі</h1>
+<p>
+    <font color="aqua">
+        Я люблю техніку. Розуміюсь на процесорах, відеокартах, пам'яті. Можу зібрати комп'ютер, розібрати комп'ютер. Також
+        люблю грати в комп'ютерні ігри наприклад Форза Хорайзен 5, Дота 2, КС2 та інші.
+    </font>
+    Я люблю техніку. Розуміюсь на процесорах, відеокартах, пам'яті. Можу зібрати комп'ютер, розібрати комп'ютер. Також
+    люблю грати в комп'ютерні ігри наприклад Форза Хорайзен 5, Дота 2, КС2 та інші.
+</p>
+<h2>Програмування
+</h2>
+<pre>
+function initializeDishState(dishState: DishesStateService,
+                             shopState: ShopListStateService,
+                             auth: AuthenticationService
+                             ) {
+   return async () => {
+     if (typeof window !== 'undefined') {
+       if (localStorage.getItem('saved')) {
+         dishState.savedDishes = JSON.parse(localStorage.getItem('saved')!);
+         dishState.change = false
+       }
+       if (localStorage.getItem('marked')) {
+         shopState.mark(JSON.parse(localStorage.getItem('marked')!))
+       }
+       if (localStorage.getItem('token')) {
+         await auth.quickLogin(localStorage.getItem('token')!)
+       }
+     }
+     return
+  }
+}
+</pre>
+<p>
+    <i><u>Студент групи 302-ТН Кучер НВ</u></i>
+</p>
+</body>
+</html>
